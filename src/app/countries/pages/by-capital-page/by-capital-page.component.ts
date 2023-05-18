@@ -10,7 +10,8 @@ export class ByCapitalPageComponent {
 
 
   searchByCapital(value: string): void{
-    console.log('search val from capPage: ', value)
+    console.log('from capital page')
+    console.log({value})
   }
 
 }

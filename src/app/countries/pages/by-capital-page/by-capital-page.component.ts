@@ -21,9 +21,7 @@ export class ByCapitalPageComponent {
   searchByCapital(value: string): void{
     this.countryService.searchByCapital(value).subscribe((res: Country[])=>{
       this.countries = res;
-      console.log('countries, ', this.countries)
     })
-
   }
 
 }

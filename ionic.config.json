@@ -1,0 +1,7 @@
+{
+  "name": "country-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

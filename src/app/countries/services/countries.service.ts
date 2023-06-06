@@ -12,4 +12,9 @@ export class CountriesService {
     return this.http.get<Country[]>(`${environment.apiURL}/${type}/${value}`)
     .pipe( catchError(error => of([])));
   }
+
+  searchByCode(value: string): Observable<Country>{
+    return this.http.get<Country>(`${environment.apiURL}/alpha/${value}`)
+    .pipe( catchError(error => of()));
+  }
 }

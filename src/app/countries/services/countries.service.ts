@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environments/environment';
-import { Observable, catchError, delay, map, of } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { Country } from '../interfaces/country';
 @Injectable({providedIn: 'root'})
 export class CountriesService {

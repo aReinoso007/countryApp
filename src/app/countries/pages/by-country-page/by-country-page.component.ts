@@ -11,6 +11,7 @@ import { CountriesService } from '../../services/countries.service';
 export class ByCountryPageComponent  implements OnInit{
 
   public countries: Country[]=[]
+  public initialValue = '';
   constructor(
     private countryService: CountriesService)
     {
@@ -18,6 +19,7 @@ export class ByCountryPageComponent  implements OnInit{
   }
   ngOnInit(): void {
     this.countries = this.countryService.cacheStore.byCountry.countries!
+    this.initialValue =(this.countryService.cacheStore.byCountry.term ? this.countryService.cacheStore.byCountry.term : '')
   }
 
   searchByCountry(value: string): void{

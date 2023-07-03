@@ -21,7 +21,7 @@ export class CountriesService {
     .pipe(
       tap( countries=> {
         if(type === 'capital') this.cacheStore.byCapital= {term, countries}
-        if(type ==='country') this.cacheStore.byCountry= {term, countries}
+        if(type ==='name') this.cacheStore.byCountry= {term, countries}
         if(type === 'region') this.cacheStore.byRegion={region: term as Region, countries}
       }),
       catchError(() => of([]) ),

@@ -12,6 +12,7 @@ export class ByCountryPageComponent  implements OnInit{
 
   public countries: Country[]=[]
   public initialValue = '';
+  public isLoading: boolean = false;
   constructor(
     private countryService: CountriesService)
     {
@@ -23,8 +24,10 @@ export class ByCountryPageComponent  implements OnInit{
   }
 
   searchByCountry(value: string): void{
+    this.isLoading = true;
     this.countryService.search(value,'name').subscribe((res: Country[])=>{
       this.countries = res;
+      this.isLoading = false
     })
   }
 
